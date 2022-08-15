@@ -1,0 +1,22 @@
+%h3 Наши контакты
+%p Напишите нам письмо
+%hr
+
+  %form{action:"/contact", method:"POST", enctype:"multipart/form-data"}
+    .mb-3
+      %label.form-labelУкажите Ваше имя
+      %input.form-control{placeholder:"В этом поле введите Ваше имя", name:"name"}
+    .mb-3
+      %label.form-label{for:"exampleFormControlInput1"} Тема письма
+      %input.form-control{placeholder:"В этом поле введите тему письма", name:"subject"}
+    .mb-3
+      %label.form-label{for:"exampleFormControlInput1"} Укажите свой адрес почты чтобы мы могли прислать Вам ответ.
+      %input.form-control{placeholder:"В этом поле введите адрес Вашей электронной почты", type:"email", name:"mail"}
+    .mb-3
+      %label.form-label{for:"exampleFormControlTextarea1"} Напишите нам ниже
+      %textarea.form-control{placeholder:"В этом поле введите текст Вашего письма", rows:"3", name:"body"}
+    .mb-3
+      %label.form-label{for: "formFileMultiple"} Прикрепить текстовый файл
+      %input.form-control{type: "file", name: "file"}
+
+    %button.btn.btn-primary{type: "submit"} Отправить письмо

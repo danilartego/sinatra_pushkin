@@ -1,0 +1,47 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{content:"text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Barbershop
+    / Required meta tags
+    %meta{charset:"utf-8"}
+    %meta{content:"width=device-width, initial-scale=1, shrink-to-fit=no", name:"viewport"}
+    / Bootstrap CSS
+    %link{href:"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css", rel:"stylesheet"}
+    %script{type: "text/javascript", src: "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"}
+    %script{src:"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"}
+    %script{src: "jquery.simplecolorpicker.js"}
+    %link{rel: "stylesheet", href: "jquery.simplecolorpicker.css"}
+  %body
+    .container
+      %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        %a.navbar-brand{href: "/"} Barbershop
+        %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", type:"button"}
+          %span.navbar-toggler-icon
+        #navbarSupportedContent.collapse.navbar-collapse
+          %ul.navbar-nav.mr-auto
+            %li.nav-item.active
+              %a.nav-link{href: "/about"} About
+            %li.nav-item.active
+              %a.nav-link{href: "/visit"} Visit
+            %li.nav-item.active
+              %a.nav-link{href: "/contact"} Contact
+            %li.nav-item.active
+              %a.nav-link{href: "/admin"} Login
+            -# %span.sr-only (current)
+            -# %li.nav-item.dropdown
+            -#   %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            -#     = username
+            -#   .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+            -#     %a.dropdown-item{:href => "/login/form"} Login
+            -#     .dropdown-divider
+            -#     %a.dropdown-item{:href => "/logout"} Logout
+      %div
+        - if @error != "" && @error then
+          .alert.alert-danger= @error
+        = yield
+    / Optional JavaScript
+    / jQuery first, then Popper.js, then Bootstrap JS
+    %script{:crossorigin => "anonymous", :integrity => "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", :src => "https://code.jquery.com/jquery-3.2.1.slim.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh", :src => "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"}

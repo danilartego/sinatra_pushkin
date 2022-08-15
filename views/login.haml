@@ -1,0 +1,12 @@
+%h3= @title
+%p= @message
+%hr
+
+%form{action:"/admin", method:"POST"}
+  .mb-3
+    %label.form-label{for:"exampleInputEmail1"} Адрес электронной почты
+    %input.form-control{type:"email", placeholder:"В этом окне введите адрес вашей почты",  name:"username"}
+  .mb-3
+    %label.form-label{for:"exampleInputPassword1"} Пароль
+    %input.form-control{type:"password", placeholder:"В этом окне введите ваш пароль", name:"password"}
+  %button.btn.btn-primary{type:"submit"} Отправить

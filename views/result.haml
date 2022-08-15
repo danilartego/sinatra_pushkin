@@ -1,0 +1,7 @@
+%h3= @title
+%p= @message
+%hr
+
+- @file.each do |line|
+  %p= line
+- @file.close
