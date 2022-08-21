@@ -5,6 +5,8 @@ require 'slim'
 require 'haml'
 require 'pony'
 
+set :bind, '0.0.0.0'
+
 # configure do
 #   enable :sessions
 # end
