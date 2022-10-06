@@ -18,25 +18,25 @@
   .mb-3
     %label.form-label Выберите парикмахера
     %select.form-control{name: "barber"}
-      %option Откройте это меню выбора парикмахера
-      %option Барбер Максим
-      %option Барбер Денис
-      %option Барбер Александр
+      %option{} Откройте это меню выбора парикмахера
+      %option{value: "Барбер Максим", selected: params[:barber] == "Барбер Максим" }= "Барбер Максим"
+      %option{value: "Барбер Денис", selected: params[:barber] == "Барбер Денис" }= "Барбер Денис"
+      %option{value: "Барбер Александр", selected: params[:barber] == "Барбер Александр" }= "Барбер Александр"
   .mb-3
     %label.form-label Выберите цвет краски
     %select#color.form-control{name: "color"}
-      %option{:value => "#7bd148"} Green
-      %option{:value => "#5484ed"} Bold blue
-      %option{:value => "#a4bdfc"} Blue
-      %option{:value => "#46d6db"} Turquoise
-      %option{:value => "#7ae7bf"} Light green
-      %option{:value => "#51b749"} Bold green
-      %option{:value => "#fbd75b"} Yellow
-      %option{:value => "#ffb878"} Orange
-      %option{:value => "#ff887c"} Red
-      %option{:value => "#dc2127"} Bold red
-      %option{:value => "#dbadff"} Purple
-      %option{:value => "#e1e1e1"} Gray
+      %option{value: "#7bd148"} Green
+      %option{value: "#5484ed"} Bold blue
+      %option{value: "#a4bdfc"} Blue
+      %option{value: "#46d6db"} Turquoise
+      %option{value: "#7ae7bf"} Light green
+      %option{value: "#51b749"} Bold green
+      %option{value: "#fbd75b"} Yellow
+      %option{value: "#ffb878"} Orange
+      %option{value: "#ff887c"} Red
+      %option{value: "#dc2127"} Bold red
+      %option{value: "#dbadff"} Purple
+      %option{value: "#e1e1e1"} Gray
 
   %button.btn.btn-primary{:type => "submit"} Записаться
 

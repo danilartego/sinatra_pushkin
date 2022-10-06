@@ -69,8 +69,8 @@ post '/contact' do
     to:       'danil-a@mail.ru',
     subject:  "#{@name} - #{@mail} - #{@subject}",
     body:     @body,
-    :html_body => "<h1>#{@name} - #{@mail}</h1><p>#{@body}</p>",
-    :attachments => {@file_name => File.read(@file_path)},
+    html_body: "<h1>#{@name} - #{@mail}</h1><p>#{@body}</p>",
+    attachments: {@file_name => File.read(@file_path)},
     via:      :smtp,
 
     via_options: { 
